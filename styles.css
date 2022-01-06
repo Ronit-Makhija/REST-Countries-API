@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  --HeaderBgColor: hsl(0, 0%, 100%);
+  --FooterbgColor:hsl(0, 0%, 98%);
+  --fontColor:hsl(200, 15%, 8%);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--FooterbgColor);
+  color: var(--fontColor);
+  font-family: 'Nunito Sans' , sans-serif;
+}
+
+.darkMode{
+  --FooterbgColor: hsl(207, 26%, 17%);
+  --fontColor: hsl(0, 0%, 100%);
+  --HeaderBgColor: hsl(209, 23%, 22%);
+  background-color: var(--FooterbgColor);
+  color: var(--fontColor);
+}
+
+.header , .search-country{
+  /* width: 100%; */
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header{
+  box-shadow: 0 0 5px rgba(0 , 0 , 0, 0.3);
+  background-color: var(--HeaderBgColor);
+}
+.header button{
+  color: var(--fontColor);
+}
+.search-country{
+  padding: 50px;
+}
+
+button{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Nunito Sans' , sans-serif;
+}
+.form-control input{
+  font-family: 'Nunito Sans' , sans-serif;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  left: 2rem;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding: 14px 0 14px 40px;
+  background-color: var(--HeaderBgColor);
+  color: var(--fontColor)
+}
+.form-control{
+  width: 400px;
+  box-shadow: 0 0 5px rgba(0 , 0 , 0 , 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.form-control i{
+  position: absolute;
+  top: 9.3rem;
+  left: 3.9rem;
+  color: hsl(0, 0%, 52%);
+}
+
+.toggle{
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+.toggle i{
+  padding-right: 5px;
+}
+
+.dropdown-menu{
+  width: 180px;
+  position: relative;
+}
+.dropdown i{
+  color: var(--fontColor);
+}
+.dropdown{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  padding: 12px;
+  background-color: var(--HeaderBgColor);
+  cursor: pointer;
+  color: var(--fontColor);
+}
+.dropdown-content{
+  position: absolute;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  background-color: var(--HeaderBgColor);
+  top: 4rem;
+  width: 100%;
+}
+.dropdown-content p{
+  margin-left: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.dropdown-content p:hover{
+  font-weight: bold;
+}
+.dropdown-content p:nth-child(6){
+  margin-bottom: 10px;
+}
+
+.countries{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-column-gap: 20px;
+  padding: 50px;
+  padding-top: 0;
+}
+
+.country{
+  min-height: 310px;
+  width: 280px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  background-color: var(--HeaderBgColor);
+  cursor: pointer;
+}
+.country-flag{
+  height: 150px;
+  border-radius: 5px;
+}
+
+.country-flag img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.country-info h5{
+  font-size: 20px;
+  margin-bottom: 13px;
+  font-weight: 800;
+}
+.country-info p{
+  margin-bottom: 3.5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.country-info strong{
+  font-size: 16px;
+  margin-right: 5px;
+  font-weight: 800;
+}
+.country-info{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.region{
+  display: none;
+}
+
+.country-details{
+  display: grid;
+  grid-template-columns: 550px 550px;
+  grid-column-gap: 65px;
+}
+.detail{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+.detailsPage{
+  padding-left: 50px;
+}
+.country-details{
+
+}
+.image{
+  height: 300px;
+  /* border: 5px solid red; */
+}
+.image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.back{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  width: 110px;
+  font-size: 15px;
+  font-style: bold;
+  letter-spacing: 1px;
+  background-color: var(--HeaderBgColor);
+  color: var(--fontColor);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.back i{
+  margin-right: 10px;
+}
+.detail-left{
+  padding-top: 20px;
+}
+.detail-left h5{
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.detailsPage strong{
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.detailsPage p{
+  margin-bottom: 10px;
+}
+.border{
+  margin-top: 63px;
+}
+.detail-right{
+  padding-top: 78px;
+}
